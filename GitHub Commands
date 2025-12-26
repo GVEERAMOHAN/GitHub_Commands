@@ -1,0 +1,137 @@
+@### GitHub Commands:-
+
+# 1. Typical Git Workflow Example(From global to local):
+
+git clone <repo>
+git status
+git add .
+git commit -m "message"
+git push origin main
+
+# 2. Typical Git Workflow Example(From local to global):
+
+git init
+git status
+git add .
+git commit -m "message"
+git branch -M main
+git remote add origin <repo>
+git push -u origin main
+
+______________________________________________
+# Setup & Configuration:
+
+| Command                                  | Use                     |
+| ---------------------------------------- | ----------------------- |
+| `git config --global user.name "Name"`   | Set your username       |
+| `git config --global user.email "email"` | Set your email          |
+| `git config --list`                      | View current Git config |
+| `git help <command>`                     | Get help for a command  |
+
+______________________________________________
+# Creating & Getting Repositories:
+
+| Command           | Use                         |
+| ----------------- | --------------------------- |
+| `git init`        | Create a new Git repository |
+| `git clone <url>` | Copy an existing repository |
+
+______________________________________________
+# Basic Workflow (Most Important):
+
+| Command                    | Use                          |
+| -------------------------- | ---------------------------- |
+| `git status`               | Check file changes and state |
+| `git add <file>`           | Stage a file                 |
+| `git add .`                | Stage all changes            |
+| `git commit -m "message"`  | Save staged changes          |
+| `git commit -am "message"` | Add & commit tracked files   |
+| `git log`                  | View commit history          |
+| `git log --oneline`        | Short commit history         |
+
+______________________________________________
+# Branching:
+
+| Command                    | Use                  |
+| -------------------------- | -------------------- |
+| `git branch`               | List branches        |
+| `git branch <name>`        | Create a branch      |
+| `git checkout <branch>`    | Switch branches      |
+| `git checkout -b <branch>` | Create & switch      |
+| `git switch <branch>`      | Modern way to switch |
+| `git merge <branch>`       | Merge a branch       |
+| `git branch -d <branch>`   | Delete a branch      |
+
+______________________________________________
+# Remote Repositories (GitHub, GitLab, etc.)
+
+| Command                       | Use                   |
+| ----------------------------- | --------------------- |
+| `git remote -v`               | Show remote URLs      |
+| `git remote add origin <url>` | Add remote repo       |
+| `git push origin <branch>`    | Upload changes        |
+| `git push -u origin <branch>` | Push & set upstream   |
+| `git pull`                    | Fetch + merge changes |
+| `git fetch`                   | Download changes only |
+
+______________________________________________
+# Undoing & Fixing Mistakes:
+
+| Command                       | Use                          |
+| ----------------------------- | ---------------------------- |
+| `git restore <file>`          | Undo file changes            |
+| `git restore --staged <file>` | Unstage a file               |
+| `git reset <file>`            | Unstage file (old way)       |
+| `git reset --hard`            | Reset everything (dangerous) |
+| `git revert <commit>`         | Undo commit safely           |
+| `git checkout -- <file>`      | Discard file changes         |
+
+______________________________________________
+# Comparing Changes:
+
+| Command                        | Use                  |
+| ------------------------------ | -------------------- |
+| `git diff`                     | See unstaged changes |
+| `git diff --staged`            | See staged changes   |
+| `git diff <branch1> <branch2>` | Compare branches     |
+
+______________________________________________
+# Stashing (Temporary Save):
+
+| Command           | Use                      |
+| ----------------- | ------------------------ |
+| `git stash`       | Save changes temporarily |
+| `git stash list`  | Show stashes             |
+| `git stash apply` | Restore stash            |
+| `git stash drop`  | Delete stash             |
+
+______________________________________________
+# Tags (Releases):
+
+| Command                 | Use          |
+| ----------------------- | ------------ |
+| `git tag`               | List tags    |
+| `git tag <name>`        | Create a tag |
+| `git push origin <tag>` | Push tag     |
+
+______________________________________________
+10. Advanced / Less Common
+
+| Command                    | Use                    |
+| -------------------------- | ---------------------- |
+| `git rebase <branch>`      | Reapply commits        |
+| `git cherry-pick <commit>` | Copy a commit          |
+| `git blame <file>`         | See who changed what   |
+| `git show <commit>`        | View commit details    |
+| `git clean -f`             | Remove untracked files |
+
+______________________________________________
+11. Plumbing (Rarely Used – Internal Git)
+
+Mostly for advanced users or tools
+
+git hash-object
+git cat-file
+git update-index
+git write-tree
+git commit-tree
